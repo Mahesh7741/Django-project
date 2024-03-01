@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>List of Persons</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(to right, #2980b9, #6dd5fa);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        .table-container {
+            margin-top: 20px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-spacing: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2980b9;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+
+        .icon {
+            color: #2980b9;
+            margin-right: 5px;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>WELCOME TO MANAGEMENT SYSTEM</h2>
+        <h3 style="text-align: center; color: red;">Developed by Mahesh Sawant</h3>
+        <hr>
+        <h4 style="text-align: center;"><b><i>SUMMARY OF EACH USER</i></b></h4>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Student Name</th>
+                        <th>City</th>
+                        <th>Address</th>
+                        <th>Branch</th>
+                        <th>Education</th>
+                        <th>Experience</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in stud12 %}
+                    <tr>
+                        <td>{{ entry.user }}</td>
+                        <td>{{ entry.student_name }}</td>
+                        <td>{{ entry.city }}</td>
+                        <td>{{ entry.address }}</td>
+                        <td>{{ entry.branch }}</td>
+                        <td>{{ entry.education }}</td>
+                        <td>{{ entry.experience }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <hr>
+        <h4 style="text-align: center;"><b><i>ADDITIONAL INFORMATION</i></b></h4>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data Visualization</td>
+                        <td>Using charts and graphs to represent data.</td>
+                        <td><button class="btn"><i class="fas fa-chart-bar"></i> View Charts</button></td>
+                    </tr>
+                    <tr>
+                        <td>Analytics</td>
+                        <td>Statistical analysis and interpretation of data.</td>
+                        <td><button class="btn"><i class="fas fa-chart-line"></i> View Analytics</button></td>
+                    </tr>
+                    <tr>
+                        <td>Reports</td>
+                        <td>Generation of detailed reports based on data.</td>
+                        <td><button class="btn"><i class="fas fa-file-alt"></i> View Reports</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
