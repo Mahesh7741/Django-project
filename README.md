@@ -2,7 +2,7 @@
 
 ## Description
 
-[Django Project Name] is a web application developed using Django, a high-level Python web framework. It [mention what the project does].
+[ Project Management ] is a web application developed using Django, a high-level Python web framework. It [mention what the project does].
 
 ## Table of Contents
 
